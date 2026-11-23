@@ -10,9 +10,9 @@
               <input
                 class="form-control form-control-lg"
                 formControlName="title"
-                name="title"
+                name="article-title"
                 type="text"
-                placeholder="Article Title"
+                placeholder="Title"
               />
             </fieldset>
 
@@ -20,7 +20,7 @@
               <input
                 class="form-control"
                 formControlName="description"
-                name="description"
+                name="article-description"
                 type="text"
                 placeholder="What's this article about?"
               />
@@ -55,9 +55,7 @@
               </div>
             </fieldset>
 
-            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">
-              Publish Article
-            </button>
+            <button class="btn btn-lg pull-xs-right btn-primary" type="button" (click)="submitForm()">Publish</button>
           </fieldset>
         </form>
       </div>
