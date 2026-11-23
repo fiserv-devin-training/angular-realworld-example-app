@@ -16,6 +16,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "bundler",
     "importHelpers": true,
+    "paths": {
+      "@conduit/shared": ["./projects/shared/src/public-api.ts"]
+    },
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
@@ -26,5 +29,22 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "references": [
+    {
+      "path": "./projects/shell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/articles/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/profile/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/shared/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/shared/tsconfig.spec.json"
+    }
+  ]
 }

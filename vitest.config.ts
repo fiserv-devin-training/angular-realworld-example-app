@@ -7,8 +7,8 @@ export default defineConfig({
   test: {
     globals: false,
     environment: 'jsdom',
-    setupFiles: [fileURLToPath(new URL('./src/test-setup.ts', import.meta.url))],
-    include: ['src/**/*.spec.ts'],
+    setupFiles: [fileURLToPath(new URL('./projects/test-setup.ts', import.meta.url))],
+    include: ['projects/**/*.spec.ts'],
     pool: 'threads',
     coverage: {
       provider: 'v8',
@@ -20,7 +20,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@conduit/shared': fileURLToPath(new URL('./projects/shared/src/public-api.ts', import.meta.url)),
     },
   },
 });

@@ -3,11 +3,13 @@ import { baseConfig } from './realworld/specs/e2e/playwright.base';
 
 /**
  * Angular-specific Playwright configuration.
- * Extends the shared RealWorld base config with the Angular dev server.
+ * Extends the shared RealWorld base config with the three microfrontend dev
+ * servers: shell (4200), articles (4201), profile (4202).
  */
 export default defineConfig({
   ...baseConfig,
   testDir: './realworld/specs/e2e',
+  globalSetup: './e2e-support/wait-for-remotes.ts',
 
   use: {
     ...baseConfig.use,
@@ -15,9 +17,9 @@ export default defineConfig({
   },
 
   webServer: {
-    command: 'npm run start',
+    command: 'bun run start:all',
     url: 'http://localhost:4200',
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
   },
 });
