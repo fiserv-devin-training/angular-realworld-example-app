@@ -1,0 +1,4 @@
+{
+  "articles": "http://localhost:4201/remoteEntry.json",
+  "profile": "http://localhost:4202/remoteEntry.json"
+}

@@ -4,7 +4,8 @@
 
 ```bash
 bun run setup         # Init submodules + install deps (run after clone or after realworld submodule update)
-bun run start         # Dev server at localhost:4200
+bun run start:all     # Shell :4200, articles :4201, profile :4202 (bun run start = shell only)
+bun run build:all     # Build all three apps
 bun run test          # Unit tests (Vitest)
 bun run test:e2e      # E2E tests (Playwright)
 bun run format        # Format code with Prettier
